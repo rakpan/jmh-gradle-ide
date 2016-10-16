@@ -24,12 +24,12 @@ this sample contains undocumented tricks.
 
 select `HelloBenchmStreamProcessingBenchmarkrk` and `Run As` > `Java Application`
 
-# Depends on
+### Depends on
 
 * [melix/jmh-gradle-plugin](https://github.com/melix/jmh-gradle-plugin)
 * [johnrengelman/shadow](https://github.com/johnrengelman/shadow)
 * [tbroyer/gradle-apt-plugin](https://github.com/tbroyer/gradle-apt-plugin)
 
-# License
+### License
 
 Apache License, Version 2.0
