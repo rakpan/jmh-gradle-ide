@@ -1,10 +1,9 @@
 plugins {
 	id 'java'
-	id 'eclipse'
 	id 'idea'
-	id 'com.github.johnrengelman.shadow' version '1.2.2'
-	id 'me.champeau.gradle.jmh' version '0.2.0'
-	id 'net.ltgt.apt' version '0.3'
+	id 'com.github.johnrengelman.shadow' version '1.2.3'
+	id 'me.champeau.gradle.jmh' version '0.3.1'
+	id 'net.ltgt.apt' version '0.9'
 }
 
 repositories {
@@ -16,8 +15,8 @@ sourceCompatibility = targetCompatibility = 1.8
 
 tasks.withType(AbstractCompile)*.options*.encoding = "UTF-8"
 
-jmh.jmhVersion = '1.10.+'
-tasks.jmh.main = 'example.benchmark.HelloBenchmark'
+jmh.jmhVersion = '1.15'
+tasks.jmh.main = 'me.rakpan.StreamProcessingBenchmark'
 
 jmhJar {
 	manifest.attributes 'Main-Class': tasks.jmh.main
@@ -30,10 +29,3 @@ dependencies {
 	apt "org.openjdk.jmh:jmh-generator-annprocess:${jmh.jmhVersion}"
 }
 
-eclipse {
-	classpath {
-		containers = [
-			'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
-		]
-	}
-}

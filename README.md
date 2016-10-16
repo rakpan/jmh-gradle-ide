@@ -22,7 +22,7 @@ this sample contains undocumented tricks.
 
 ### on Eclipse
 
-select `HelloBenchmark` and `Run As` > `Java Application`
+select `HelloBenchmStreamProcessingBenchmarkrk` and `Run As` > `Java Application`
 
 # Depends on
 
